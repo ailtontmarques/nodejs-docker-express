@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-docker-express-containered
+  namespace: namespace-workflow-1700669243707
+spec:
+  type: LoadBalancer
+  selector:
+    app: nodejs-docker-express-containered
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
