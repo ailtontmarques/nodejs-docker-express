@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-docker-express-containered
+  labels:
+    app: nodejs-docker-express-containered
+  namespace: namespace-workflow-1700669243707
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-docker-express-containered
+  template:
+    metadata:
+      labels:
+        app: nodejs-docker-express-containered
+    spec:
+      containers:
+        - name: nodejs-docker-express-containered
+          image: acrworkflow1700669243707.azurecr.io/image-workflow-1700669243707:latest
+          ports:
+            - containerPort: 3000
