@@ -2,6 +2,7 @@
 
 ## Description
 
+Example app Node with Express to Docker environment
 
 ## Installation
 
